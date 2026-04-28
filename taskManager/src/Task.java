@@ -73,19 +73,19 @@ public class Task {
 
 	// from Task object to File
 	public void  saveAsJSON(String filename){
-		String json = new JsonBuilder()
-			// create the JSON form 
-			  .add("ID", this.id)
-			  .add("TITLE", this.title)
-			  .add("DESCRIPTION",this.description)
-			  .add("SHEDULE",this.this.sheduled)
-			  .add("CREATED_AT",this.createAt)
-			  .add("STATUS",this.status)
-			  .add("IMPORTANCE",this.importance)
-			  .toJson();
-			// convert json object to file
+		json.add("ID", this.id);
+			  json.add("TITLE", this.title);
+			  json.add("DESCRIPTION",this.description);
+			  json.add("SHEDULE",this.this.sheduled);
+			  json.add("CREATED_AT",this.createAt);
+			  json.add("STATUS",this.status);
+			  json.add("IMPORTANCE",this.importance);
+			  json.addLast();
+			  json.toJson();
+
+			// save to file
 		try (FileWriter file = new FileWriter(filename)) {
-			file.write(json);
+			file.write(json.toJson());
 			System.out.printf("[SUCCESS] : Fichier %s sauvegardé avec succés" , filename);
 		} catch (IOException e) {
 			e.printStackTrace();
