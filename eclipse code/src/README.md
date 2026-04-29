@@ -63,6 +63,7 @@ __________
 	+ id : long
 	+ title : String
 	+ text : String
+	+ description : String
 	+ status : String{"new"..."completed"}(default="new")
 	+ importance : int{1..5}(default=3)
 	+ createdAt : Date.now()
