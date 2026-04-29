@@ -8,6 +8,10 @@ public class Main extends GUI {
 		this.WIDTH = 1024 ;
 		this.HEIGHT = 850 ;
 		this.name = "Gérer les tâches Facilement";
+
+		// modify the default fxml
+		setFxmlTemplatePath("Main.fxml");
 		super(w,h);
 	}
+
 }
