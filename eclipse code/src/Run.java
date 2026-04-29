@@ -15,4 +15,7 @@ public class Run extends Application{
 	public static void main(String[] args) {
 		launch(args);
 	}
+	public static void ChangeScene(GUI view){
+		Run.SCENE_DE_APP = view.getScene();
+	}
 }

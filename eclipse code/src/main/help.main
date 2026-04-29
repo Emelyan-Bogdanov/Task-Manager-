@@ -1,1 +1,7 @@
-- button pour ajouter 'new task'
+? the main.Main represents the first windows that will be shown to the user , its an interface where there is : 
+	- button '+' to add new task with its parameters
+	- a grid scollpane view of 'existed' or 'non completed' 	tasks or IT WOULD be better if it contains 'NEAR TASKS'sorted by time.
+	- a left  FILTER to filter tasks by : 
+		+ importance
+		+ new/old (time)
+		+ topics or tags
