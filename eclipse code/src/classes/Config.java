@@ -120,8 +120,6 @@ public class Config {
 		Properties prop = new Properties();
 		try {
    			
-   			InputStream propertiesInputStream =  Config.class.getClassLoader().getResourceAsStream("/Constants.properties");
-            prop.load(propertiesInputStream);
 			// set variables
 			prop.setProperty("SETTINGS_PATH",getSettingsPath());
 			prop.setProperty("ALLOWED_EXT",ALLOWED_EXT[0] + "," + ALLOWED_EXT[1]);
