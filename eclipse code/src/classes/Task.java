@@ -3,6 +3,16 @@
 import java.time.LocalDate; // for date
 import java.time.LocalTime; // for time
 
+
+
+// start dependencies for properties file
+import java.io.FileNotFoundException;
+import java.io.File;
+import java.util.Properties;
+import java.io.InputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
 public class Task {
 	// id unique pour chaque task
 	public static int ID = 0;
@@ -39,10 +49,10 @@ public class Task {
 	 	this.importance = 5; // default
 	 }
 	 // ajouter d'autres infos
-	 public void setShedule(Date sheduleDate){
+	 /*public void setShedule(Date sheduleDate){
 	 	// this.shedule = sheduleDate
 
-	 }
+	 }*/
 
 	 // return a list of current time
 	 public static int[] geturrentDate(){
@@ -70,7 +80,7 @@ public class Task {
 	 			this.saveAsHTML(filename);
 	 			break;
 	 		default :
-	 			this.saveAsProperties(filename);
+	 			this.ToPropertiesFile();
 	 			break;
 	 	}
 	 }
@@ -90,9 +100,8 @@ public class Task {
 		try {
 
 			// set variables
-			prop.setProperty("id",this.id);
+			prop.setProperty("id",this.id + "");
 			prop.setProperty("title",this.title);
-			prop.setProperty("text",this.text);
 			prop.setProperty("description",this.description);
 			prop.setProperty("status",this.status);
 			prop.setProperty("importance",this.importance + "");

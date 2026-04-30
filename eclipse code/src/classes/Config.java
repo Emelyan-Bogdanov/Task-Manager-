@@ -234,18 +234,4 @@ public class Config {
 			a.printStackTrace();
 		}
 	}
-
-	/* =============================== MANAGE LOGS ======================== */
-
-
-
-
-
-	// main function 
-	public static void main(String[] args){
-		Config.createWorkspaceProjectStructure();
-
-		// start test logs
-
-	}
 }
