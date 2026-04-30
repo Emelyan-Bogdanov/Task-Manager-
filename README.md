@@ -9,6 +9,8 @@ Tu peut trouver le diagram des activté ici : [DIAGRAM](https://lucid.app/lucidc
 - chaque tâhe a son importance (1-5) et chaque niveau à ses propres couleurs
 - les tâches sont enregistré vers le chemain : C:\users%USERNAME%\appData\MyTachApp
 
+
+
  =========== class Task ===========
     📌 Fonctionnalités principales
 		- Gestion des tâches (ajouter, modifier, supprimer)
