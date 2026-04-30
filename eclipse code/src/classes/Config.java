@@ -12,7 +12,6 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
 
-
 public class Config {
 	public static String 
 	ROOT_PATH = "/workspace",
@@ -26,7 +25,8 @@ public class Config {
 	REMINDER_PATH = "/Reminder",
 	PATH_OF_IDS = "/Ids",
 	DATABASE_PATH = "/tasks/database",
-	SETTINGS_FILE = "/settings.properties";
+	SETTINGS_FILE = "/settings.properties",
+	LOG_FILE = "/logs.log";
 
 	// functions
 	public static String getRootPath(){
@@ -234,9 +234,18 @@ public class Config {
 			a.printStackTrace();
 		}
 	}
-	
+
+	/* =============================== MANAGE LOGS ======================== */
+
+
+
+
+
 	// main function 
 	public static void main(String[] args){
 		Config.createWorkspaceProjectStructure();
+
+		// start test logs
+
 	}
 }
