@@ -45,7 +45,7 @@ public class GUI {
 			this.ROOT = FXMLLoader.load(Main.class.getClass().getResource(this.FXML)); 	
 			System.out.printf("%s FXML loaded successfully \n",path);
 		}
-		except {
+		catch() {
 			// print the banner so i notice it
 			System.out.println("==========================\n ==========================\n");
 			System.out.printf("|| FXML_ERROR : Failed to load fxml from '%s' , try to  : \n\t - Verify FXML template or syntaxe \n\t - Verify the if path is correct ",path);
