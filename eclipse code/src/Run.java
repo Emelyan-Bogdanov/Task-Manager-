@@ -4,18 +4,15 @@ import javafx.stage.Stage;
 import main.Main;
 
 public class Run extends Application{
-	public static Scene SCENE_DE_APP = Main.getScene();
+	public static Scene STAGE_MAIN = Main.getScene();
 	@Override
 	public void start(Stage stage) throws Exception {
-		SCENE_DE_APP = Main.getScene();
+		Scene main = Main.getScene();
 		
-		stage.setScene(SCENE_DE_APP);
+		stage.setScene(main);
 		stage.show();
 	}
 	public static void main(String[] args) {
 		launch(args);
-	}
-	public static void ChangeScene(GUI view){
-		Run.SCENE_DE_APP = view.getScene();
 	}
 }

@@ -14,14 +14,15 @@ import java.util.logging.SimpleFormatter;
 public class LoggerTest {
 	public final Logger logger = Logger.getLogger(Config.class.getName());
 	FileHandler fileHandler = null;
-	public final int maxLogFileSize = 200, nLogs = 5;
-	String filename = Config.getLogsPath();
+	public int maxLogFileSize = 200, nLogs = 5;
+	public String filename = Config.getLogsPath();
 	public LoggerTest(){
 		setUpLogginFile();
 	}
 	public LoggerTest(String filename){
 		this.setUpLogginFile();
 		this.filename = Config.getLogsPath() + "/" + filename;
+		System.out.println("logger saved at " + this.filename);
 	}
 	public void logInfo(String message){
 		logger.log(Level.INFO, message);
@@ -37,7 +38,7 @@ public class LoggerTest {
 	public void setUpLogginFile(){
 		// save to file
         try {
-        		fileHandler = new FileHandler(Config.getLogsPath() +  Config.LOG_FILE, maxLogFileSize * 1024 * 1024,nLogs, true);
+        		fileHandler = new FileHandler(this.filename, maxLogFileSize * 1024 * 1024,nLogs, true);
             /*
 				NOTE : 
 					- maxLogFileSize => the max size of a log
@@ -49,8 +50,6 @@ public class LoggerTest {
         } catch (Exception e) {
             logger.severe("Failed to set up file handler");
         }
-	}
-	public static void main(String[] args){
-		
+        System.out.println("logger saved at " + this.filename);
 	}
 }

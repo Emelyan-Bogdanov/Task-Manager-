@@ -4,11 +4,5 @@ import javafx.scene.control.Button;
 
 public class MainController {
 
-    /*@FXML
-    private Button myButton;
 
-    @FXML
-    private void initialize() {
-        myButton.setOnAction(e -> System.out.println("Button clicked!"));
-    }*/
 }
